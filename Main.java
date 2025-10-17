@@ -11,9 +11,24 @@ public class Main {
             switch(op) {
                 case 1:
                     io.cadCliente(s); break;
-                //case 2:
-                    //io.cadVendedor(s); break;
-                //case 3: ...
+                case 2:
+                    io.cadVendedor(s); break;
+                case 3:
+                    io.cadGerente(s); break;
+                case 4:
+                    io.cadVeiculo(s); break;
+                case 5:
+                    io.cadVenda(s); break;
+                case 6:
+                    io.relVendasMensal(s); break;
+                case 7:
+                    io.relVendasAnual(s); break;
+                case 8:
+                    io.relVendasVendedor(s); break;
+                case 0:
+                    System.out.println("Saindo..."); break;
+                default:
+                    System.out.println("Opção inválida!"); break;
             }
 
             op = io.menu();
