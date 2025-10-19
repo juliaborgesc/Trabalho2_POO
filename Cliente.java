@@ -10,4 +10,6 @@ public class Cliente extends Pessoa {
         return email;
     }
 
+    public String toString() {return this.nome + " - CPF: " + this.cpf + " - " + this.email;}
+
 }
