@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Classe com as rotinas de entrada e saída do projeto
- * @author Hilario Seibel Junior e <seu nome aqui>
+ * @author Hilario Seibel Junior, Julia Borges e Wilsiman Evangelista
  */
 public class Entrada {
     public Scanner input;
@@ -118,6 +118,22 @@ public class Entrada {
         else {
             System.out.println("Erro: CPF duplicado. Cliente não adicionado.");
         }
+    }
+
+    public void cadVendedor(Sistema s) {
+
+    }
+
+    public void cadGerente(Sistema s) {
+
+    }
+
+    public void cadVeiculo(Sistema s) {
+
+    }
+
+    public void cadVenda(Sistema s) {
+
     }
 
 }

@@ -1,9 +1,15 @@
 import java.util.ArrayList;
 
 public class Sistema {
+    private ArrayList<Veiculo> veiculos;
+    private ArrayList<Vendedor> vendedores;
+    private ArrayList<Gerente> gerentes;
     private ArrayList<Cliente> clientes;
 
     public Sistema() {
+        this.veiculos = new ArrayList<>();
+        this.vendedores = new ArrayList<>();
+        this.gerentes = new ArrayList<>();
         this.clientes = new ArrayList<>();
     }
 
