@@ -226,18 +226,6 @@ public class Entrada {
         s.atribuirVendaVendedor(venda, vendedor);
     }
 
-    public void relatorio(int mes, int ano) {
-
-    }
-
-    public void relatorio(int ano) {
-
-    }
-
-    public void relatorio(Vendedor vendedor) {
-
-
-
     private void relatorioMensal(Sistema s) {
         int mes = this.lerInteiro("Digite o mês: ");
         int ano = this.lerInteiro("Digite o ano: ");
