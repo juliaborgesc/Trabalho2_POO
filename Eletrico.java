@@ -10,10 +10,10 @@ public class Eletrico extends Veiculo {
     }
 
     public int getAutonomia() {
-        // Falta implementar
+        return (int) Math.round(autonomiaBat);
     }
 
     public String toString() {
-        return marca + " " + modelo + " " + anoFab + "/" + anoMod + " - Autonomia: " + getAutonomia() + "km (Elétrico)";
+        return super.toString() + " (Elétrico)";
     }
 }
