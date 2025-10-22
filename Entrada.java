@@ -212,9 +212,9 @@ public class Entrada {
         Vendedor vendedor = s.localizarVendedor(cpfVendedor);
         s.listarVeiculos();
         int idxVeic = this.lerInteiro("Escolha um veículo pelo número: ");
-        Veiculo veic = s.getVeiculos().get(idxVeic);
+        Veiculo veic = s.getVeiculos().get(idxVeic-1);
         s.listarClientes();
-        String cpfCliente = this.lerLinha("Escolha um veículo pelo número:");
+        String cpfCliente = this.lerLinha("Digite o CPF do cliente: ");
         Cliente cliente = s.localizarCliente(cpfCliente);
         double desconto = this.lerDouble("Digite o desconto (em R$): ");
         int diaVenda = this.lerInteiro("Digite o dia da venda: ");
