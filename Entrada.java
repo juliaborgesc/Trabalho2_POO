@@ -207,6 +207,35 @@ public class Entrada {
     }
 
     public void cadVenda(Sistema s) {
+        s.listarVendedores();
+        String cpfVendedor = this.lerLinha("Digite o CPF do vendedor: ");
+        Vendedor vendedor = s.localizarVendedor(cpfVendedor);
+        s.listarVeiculos();
+        int idxVeic = this.lerInteiro("Escolha um veículo pelo número: ");
+        Veiculo veic = s.getVeiculos().get(idxVeic);
+        s.listarClientes();
+        String cpfCliente = this.lerLinha("Escolha um veículo pelo número:");
+        Cliente cliente = s.localizarCliente(cpfCliente);
+        double desconto = this.lerDouble("Digite o desconto (em R$): ");
+        int diaVenda = this.lerInteiro("Digite o dia da venda: ");
+        int mesVenda = this.lerInteiro("Digite o mês da venda: ");
+        int anoVenda = this.lerInteiro("Digite o ano da venda: ");
+        String chassi = this.lerLinha("Digite o chassi do veículo: ");
+
+        Venda venda = new Venda(veic, cliente, desconto, diaVenda, mesVenda, anoVenda, chassi);
+        s.atribuirVendaVendedor(venda, vendedor);
+    }
+
+    public void relatorio(int mes, int ano) {
+
+    }
+
+    public void relatorio(int ano) {
+
+    }
+
+    public void relatorio(Vendedor vendedor) {
+
 
 
     private void relatorioMensal(Sistema s) {
