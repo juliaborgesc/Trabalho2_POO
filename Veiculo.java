@@ -15,6 +15,10 @@ public class Veiculo {
         this.valor = valor;
     }
 
+    public double getValor() {
+        return valor;
+    }
+    
     public int getAutonomia() {
         return 0;
     }
