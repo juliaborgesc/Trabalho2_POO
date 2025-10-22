@@ -18,13 +18,14 @@ public class Veiculo {
     public double getValor() {
         return valor;
     }
-    
+
     public int getAutonomia() {
         return 0;
     }
 
-    public String toString() {
-        return marca + " " + modelo + " " + anoFab + "/" + anoMod + " - Autonomia: " + getAutonomia() + "km";
+    public String toString(){
+        return marca + " " + modelo + " " + anoFab + "/" + anoMod +
+           " - Autonomia: " + String.format("%.1f", (double) getAutonomia()) + "km";
     }
 
 }
