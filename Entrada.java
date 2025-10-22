@@ -208,30 +208,38 @@ public class Entrada {
 
     public void cadVenda(Sistema s) {
 
+
+    private void relatorioMensal(Sistema s) {
+        int mes = this.lerInteiro("Digite o mês: ");
+        int ano = this.lerInteiro("Digite o ano: ");
+        s.relatorio(mes, ano);
     }
 
-    public void relatorio(int mes, int ano) {
-
+    private void relatorioAnual(Sistema s) {
+        int ano = this.lerInteiro("Digite o ano: ");
+        s.relatorio(ano);
     }
 
-    public void relatorio(int ano) {
-
+    private void relatorioVendedor(Sistema s) {
+        String cpf = this.lerLinha("Digite o CPF do vendedor: ");
+        Vendedor ven = s.localizarVendedor(cpf);
+        if (ven == null) {
+            System.out.println("Vendedor não encontrado!");
+            return;
+        }
+        s.relatorio(ven);
     }
 
-    public void relatorio(Vendedor vendedor) {
-
+    // Métodos para poder chamar os relatorios na main 
+    public void getRelatorioMensal(Sistema s) {
+        relatorioMensal(s);
     }
 
-    // Métodos para poder chamar os relatorios na main (NÃO SEI SE ESTA CERTO E FUNCIONANDO)
-    public void relatorioMensal(int mes, int ano) {
-        relatorio(mes, ano);
+    public void getRelatorioAnual(Sistema s) {
+        relatorioAnual(s);
     }
 
-    public void relatorioAnual(int ano) {
-        relatorio(ano);
-    }
-
-    public void relatorioVendedor(Vendedor vendedor) {
-        relatorio(vendedor);
+    public void getRelatorioVendedor(Sistema s) {
+        relatorioVendedor(s);
     }
 }

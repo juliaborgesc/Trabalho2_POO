@@ -5,10 +5,10 @@ public class Main {
         Entrada io = new Entrada();
         Sistema s = new Sistema();
 
-        int op = io.menu(s);
+        int op = io.menu();
 
         while (op != 0) {
-            switch (op) {
+            switch(op) {
                 case 1:
                     io.cadCliente(s); break;
                 case 2:
@@ -20,18 +20,14 @@ public class Main {
                 case 5:
                     io.cadVenda(s); break;
                 case 6:
-                    io.relatorioMensal(s); break;
+                    io.getRelatorioMensal(s); break;
                 case 7:
-                    io.relatorioAnual(s); break;
+                    io.getRelatorioAnual(s); break;
                 case 8:
-                    io.relatorioVendedor(s); break;
-                case 0:
-                    System.out.println("Saindo..."); break;
-                default:
-                    System.out.println("Opção inválida!"); break;
+                    io.getRelatorioVendedor(s); break;
             }
 
-            op = io.menu(s);
+            op = io.menu();
         }
     }
 }

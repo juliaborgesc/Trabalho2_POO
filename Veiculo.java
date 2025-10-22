@@ -25,7 +25,7 @@ public class Veiculo {
 
     public String toString(){
         return marca + " " + modelo + " " + anoFab + "/" + anoMod +
-           " - Autonomia: " + String.format("%.1f", (double) getAutonomia()) + "km";
+           " - Autonomia: " +  getAutonomia() + ".0km";
     }
 
 }
