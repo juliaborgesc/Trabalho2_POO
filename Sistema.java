@@ -123,18 +123,24 @@ public class Sistema {
     }
 
     public  void relatorio(int mes, int ano) {
-
+        System.out.println("RELATÓRIO DE VENDAS MENSAL DE " + mes + "/" + ano + ":");
     }
 
     public  void relatorio(int ano) {
+        System.out.println("RELATÓRIO DE VENDAS ANUAL DE " + ano + ":");
 
     }
 
     public  void relatorio(Vendedor vendedor) {
+        System.out.println("RELATÓRIO DE VENDAS DO VENDEDOR:");
+        System.out.println("Vendas do vendedor " + vendedor.nome + ":");
+        double vendaTotal = 0;
         for (Venda venda : vendedor.getVendidos()) {
-            System.out.println("Vendas do vendedor " + vendedor.nome + ":");
-        System.out.println("Veiculo:" + venda.getVeiculo().getMarca());
+            venda.toString();
+            vendaTotal += venda.valor();
+            System.out.println("***************************************");
         }
+        System.out.println("Total: " + vendaTotal);
     }
 
 }
