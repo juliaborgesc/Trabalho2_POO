@@ -80,13 +80,15 @@ public class Sistema {
 
     public void listarVeiculos() {
         System.out.println("Veiculos cadastrados:");
+        int cont = 0;
 
         if (veiculos.isEmpty()) {
             System.out.println("Nenhum veiculo cadastrado");
         }
         else {
             for (Veiculo veic : this.veiculos) {
-                System.out.println(veic);
+                cont += 1;
+                System.out.println(cont + ")" + veic);
             }
         }
     }
